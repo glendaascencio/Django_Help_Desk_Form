@@ -1,0 +1,16 @@
+{% extends 'mybase.html' %}
+
+
+{% block glendasBlock %}
+
+    <p align = "center">Fill out all the required information below in order to create the software ticket
+        <font color="red">*</font></p>
+
+
+    <form method="POST" action = "">
+        {% csrf_token %}
+        {{ formInHTML.as_p }}
+        <input type="submit" value="Submit your ticket!">
+    </form>
+
+{% endblock %}

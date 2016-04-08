@@ -1,0 +1,22 @@
+{% extends 'mybase.html' %}
+{% block glendasBlock %}
+{% load staticfiles %}
+
+<!-- Hardware request list -->
+
+<h3>Hardware Request List</h3>
+    <div class="modal-body">
+        <a href="{% url 'hardwareTicket' %}">
+            <img src="{% static 'img/logo/hardware.png' %}" alt="" width="100">
+        </a>
+        <p> Create a hardware service request if you need help with the following items: A Projector, PC
+            Computer, Mac Computer,
+            Mobile Devices, Telephone, Printer, SmartBoard, Headphone, Document Camera, Toner Replacement,
+            Troubleshooting Smartboards/Computer/Sound', and if you help help with Hardware Instalation like doing
+            the Configuration or Connection</p>
+        <FORM action="{% url 'home' %}">
+            <INPUT class="btn btn-primary" Type="submit" VALUE="GO BACK TO THE HOME PAGE" >
+        </FORM>
+    </div>
+
+{% endblock %}

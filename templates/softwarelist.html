@@ -1,0 +1,22 @@
+{% extends 'mybase.html' %}
+{% block glendasBlock %}
+{% load staticfiles %}
+
+<!-- Showing the items for each software and hardware that each user can request from -->
+    <!-- Software request list -->
+<h3>Software Request List</h3>
+    <div class="modal-body">
+        <a href="{% url 'hardwareTicket' %}">
+            <img src="{% static 'img/logo/software.png' %}" alt="BIHS" width="100" height="100">
+        </a>
+        <p>Create a software request ticket if you need help with: Instalation of a software such as Microsoft Words,
+            Pages, Application Update, Virus Defenition Update such as Semantic Antivirus, OS Update: Security
+            Update, Virus Defenition Update such as semantic Antivirus, Web Plugging Updates: Flash, Security Update,
+            Instalation of Configuration or Connections
+        </p>
+        <FORM action="{% url 'home' %}">
+            <INPUT class="btn btn-primary" Type="submit" VALUE="GO BACK TO THE HOME PAGE" >
+        </FORM>
+    </div>
+
+{% endblock %}

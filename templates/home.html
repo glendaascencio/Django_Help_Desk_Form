@@ -1,0 +1,48 @@
+{% extends 'mybase.html' %}
+{% load staticfiles %}
+
+{% block glendasBlock %}
+
+
+<div class="col-lg-12 text-left">
+    <p>Welcome to the <b>Brooklyn International High School IT Help Desk Support System</b> page, which assist faculty and staff with technical issues involving SmartBoards, wireless printing or wireless network connection, as well as App support.</p>
+
+    <p>Is your issues with <b>software</b> (a program) or <b>hardware </b> (a physical equiptment)?</p>
+
+<!-- Showing information features of the hardware or software item list -->
+  <!-- First Software Feature -->
+<div class="col-md-4 col-sm-6 portfolio-item text-left">
+    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+        <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-2x"></i>
+            </div>
+        </div>
+        <a href="{% url 'softwareList' %}"><h5 class="softwarelist">
+            <img src="{% static 'img/logo/software.png' %}" alt="BIHS" width="350" height="250">
+        </h5></a>
+    </a>
+    <div class="portfolio-caption">
+        <a href="{% url 'softwareList' %}"><h5 class="softwarelist"> List Of all Software Items </h5></a>
+    </div>
+</div>
+
+    <!-- Second Harware Feature -->
+<div class="col-md-4 col-sm-6 portfolio-item text-right">
+    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+        <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-2x"></i>
+            </div>
+        </div>
+        <a href="{% url 'hardwareList' %}"><h5 class="softwarelist">
+            <img src="{% static 'img/logo/hardware.png' %}" alt="BIHS" width="350" height="250">
+        </h5></a>
+    </a>
+    <div class="portfolio-caption">
+        <a href="{% url 'hardwareList' %}"><h5 class="hardwarelist">List Of All Hardware Items</h5></a>
+    </div>
+</div>
+</div>
+
+{% endblock %}
